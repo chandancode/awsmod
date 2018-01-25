@@ -28,7 +28,7 @@ resource "aws_db_subnet_group" "main_db_subnet_group" {
 resource "aws_db_parameter_group" "parameter_group" {
   name = "${var.rds_instance_name}-parametergrp"
   description = "Increase max connection count"
-  family = "mysql5.7"
+  family = "mysql5.6"
 
   parameter {
     name = "max_connections"
